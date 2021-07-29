@@ -1,0 +1,19 @@
+@import "src/styles/variables.scss";
+@import "src/styles/mixins.scss";
+
+.header {
+  display: flex;
+  min-height: 91px;
+  align-items: center;
+  background-color: $background-white;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  @include container;
+  max-width: 1170px;
+}

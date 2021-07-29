@@ -1,0 +1,99 @@
+@import "src/styles/_variables.scss";
+@import "src/styles/mixins.scss";
+
+.promo {
+  position: relative;
+  background-color: $basic-blue;
+  min-height: 400px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 150px;
+    background: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 36.31%, #2027B3 99.79%);
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    right: 1px;
+    width: 298px;
+    background: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027B3 99.79%);
+  }
+}
+
+.container {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+  max-width: 916px;
+  padding-top: 60px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: -50px;
+    right: 74px;
+    width: 270px;
+    background: linear-gradient(183.47deg, rgba(56, 65, 255, 0) 27.26%, #3841FF 97.14%);
+  }
+}
+
+.title {
+  font-size: 54px;
+  line-height: 63px;
+  font-family: $bold-font;
+  margin: 0 0 9px;
+  color: $basic-black;
+}
+
+.text {
+  padding-top: 41px;
+  padding-left: 44px;
+  position: relative;
+
+  &::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -75px;
+    bottom: -49px;
+    width: 150px;
+    background: linear-gradient(183.47deg, rgba(56, 65, 255, 0) 66.3%, #3841FF 97.14%);
+  }
+}
+
+.description {
+  font-size: 22px;
+  line-height: 26px;
+  color: $basic-black;
+  margin: 0 0 33px;
+}
+
+.button {
+  display: inline-block;
+  font-family: $medium-font;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 17px 36px;
+  color: $basic-black;
+  background-color: $background-white;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .6;
+  }
+}
+
+.cards {
+  position: relative;
+  z-index: 2;
+}

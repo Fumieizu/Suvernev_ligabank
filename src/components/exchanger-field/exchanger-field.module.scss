@@ -1,0 +1,57 @@
+@import "src/styles/_variables.scss";
+@import "src/styles/mixins.scss";
+
+.fieldset {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  border: none;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  font-family: $medium-font;
+  font-size: 22px;
+  line-height: 31px;
+  color: $basic-black;
+}
+
+.input {
+  width: 390px;
+  height: 60px;
+  text-align: center;
+  border: 1px solid $basic-black;
+  border-radius: 4px;
+  color: $secondary-black;
+  background-color: transparent;
+  font-family: $medium-font;
+  font-size: 24px;
+  line-height: 33px;
+  margin-top: 22px;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.select {
+  width: 120px;
+  height: 60px;
+  text-align: center;
+  border: 1px solid $basic-black;
+  border-radius: 4px;
+  color: $secondary-black;
+  background-color: transparent;
+  font-family: $regular-font;
+  font-size: 30px;
+  line-height: 46px;
+  appearance: none;
+  padding: 7px 45px 9px 18px;
+  background-image: url("./selector-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 85px 24px;
+}

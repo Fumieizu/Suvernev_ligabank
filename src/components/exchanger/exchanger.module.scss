@@ -1,0 +1,19 @@
+@import "src/styles/_variables.scss";
+@import "src/styles/mixins.scss";
+
+.exchanger {
+  margin-top: 47px;
+}
+
+.container {
+  @include container;
+  max-width: 1170px;
+}
+
+.title {
+  font-family: $bold-font;
+  font-size: 41px;
+  line-height: 57px;
+  color: $basic-black;
+  margin: 0 0 48px;
+}

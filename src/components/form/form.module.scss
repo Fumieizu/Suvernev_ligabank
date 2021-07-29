@@ -1,0 +1,20 @@
+@import "src/styles/_variables.scss";
+@import "src/styles/mixins.scss";
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 120px;
+  grid-row-gap: 85px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 55px;
+    height: 34px;
+    top: 62px;
+    left: 562px;
+    background-image: url("./arrows.svg");
+  }
+}
