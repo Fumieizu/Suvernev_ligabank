@@ -19,9 +19,14 @@
 }
 
 .list__item_footer {
+  font-family: $medium-font;
   &:not(:last-child) {
     margin-right: 0;
-    margin-bottom: 7px;
+    margin-bottom: 12px;
+  }
+
+  &:first-child {
+    margin-top: 11px;
   }
 }
 

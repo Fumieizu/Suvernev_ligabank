@@ -1,0 +1,74 @@
+@import "src/styles/_variables.scss";
+@import "src/styles/mixins.scss";
+
+.footer {
+  min-height: 224px;
+  background-color: $background-white;
+}
+
+.container {
+  @include container;
+  max-width: 1170px;
+}
+
+.list {
+  @include list-style-none;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 45px;
+}
+
+.info {
+  max-width: 252px;
+}
+
+.text {
+  color: $basic-gray;
+  font-size: 12px;
+  line-height: 17px;
+  font-style: normal;
+  margin: 3px 0 0;
+
+  &:first-of-type {
+    margin-top: 15px;
+  }
+}
+
+.title {
+  font-family: $medium-font;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 16px 0 0;
+}
+
+.contacts {
+  position: relative;
+  padding-left: 32px;
+  margin-top: -5px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 16px;
+    top: 20px;
+    left: 2px;
+    background-repeat: no-repeat;
+  }
+}
+
+.mobile {
+  max-width: 200px;
+
+  &::before {
+    background-image: url("../../img/mobile.svg");
+  }
+}
+
+.phone {
+  max-width: 155px;
+
+  &::before {
+    background-image: url("../../img/phone.svg");
+  }
+}

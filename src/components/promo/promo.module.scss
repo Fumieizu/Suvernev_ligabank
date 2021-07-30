@@ -78,19 +78,13 @@
 }
 
 .button {
+  @include button;
   display: inline-block;
-  font-family: $medium-font;
   font-size: 18px;
   line-height: 21px;
   padding: 17px 36px;
-  color: $basic-black;
   background-color: $background-white;
-  border-radius: 4px;
-  cursor: pointer;
-
-  &:hover {
-    opacity: .6;
-  }
+  color: $basic-black;
 }
 
 .cards {

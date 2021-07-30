@@ -2,10 +2,10 @@ import React from 'react';
 import styles from './promo.module.scss';
 import {Link} from 'react-router-dom';
 import {AppRoute} from '../../const';
-import cardsPng from './cards.png';
-import cardsPng2x from './cards@2x.png';
-import cardsWebp from './cards.webp';
-import cardsWebp2x from './cards@2x.webp';
+import cardsPng from '../../img/cards.png';
+import cardsPng2x from '../../img/cards@2x.png';
+import cardsWebp from '../../img/cards.webp';
+import cardsWebp2x from '../../img/cards@2x.webp';
 
 export default function Promo() {
   return (

@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './exchanger-field.module.scss';
 import {Currency} from '../../const';
+import {MAX_INPUT_NUMBER_LENGTH} from '../../const';
 
-const MAX_INPUT_NUMBER_LENGTH = 15;
 
-export default function ExchangerField({label, value, onInputChange, onSelectChange, currentCurrency}){
+export default function ExchangerField({label, type, value, onInputChange, onSelectChange, currentCurrency}){
   return (
     <fieldset className={styles.fieldset}>
       <label className={styles.label}>
@@ -16,7 +16,7 @@ export default function ExchangerField({label, value, onInputChange, onSelectCha
           inputMode={'numeric'}
           maxLength={MAX_INPUT_NUMBER_LENGTH}
           value={value}
-          onChange={() => onInputChange}
+          onChange={(evt) => onInputChange(evt, type)}
         />
       </label>
       <label>
@@ -24,7 +24,7 @@ export default function ExchangerField({label, value, onInputChange, onSelectCha
           className={styles.select}
           name="Currency"
           value={currentCurrency}
-          onChange={() => onSelectChange}
+          onChange={(evt) => onSelectChange(evt, type)}
           aria-label="Селектор выбара валюты, для обмена"
         >
           {
@@ -41,6 +41,7 @@ export default function ExchangerField({label, value, onInputChange, onSelectCha
 }
 
 ExchangerField.propTypes = {
+  type: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   value: PropTypes.oneOfType([
     PropTypes.number,

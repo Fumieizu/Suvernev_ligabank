@@ -1,0 +1,34 @@
+@import "src/styles/_variables.scss";
+@import "src/styles/mixins.scss";
+
+.history {
+  margin-bottom: 110px;
+}
+
+.container {
+  @include container;
+  max-width: 1170px;
+  position: relative;
+  min-height: 477px;
+  padding: 43px 69px 39px;
+  background-color: $background-white;
+  border-radius: 4px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 289px;
+    top: 51%;
+    left: 442px;
+    border: 1px solid $border-color;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    transform: rotate(90.19deg)
+  }
+}
+
+.title {
+  font-family: $medium-font;
+  font-size: 28px;
+  line-height: 39px;
+  margin: 0 0 50px;
+}

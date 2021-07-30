@@ -11,9 +11,10 @@ export default function Menu({isOnFooter = false}) {
         MenuMap.map(({text, route}) => (
           <li key={text} className={`${styles.list__item} ${isOnFooter ? styles.list__item_footer : ''}`}>
             <NavLink
+              exact
               to={route}
               className={styles.link}
-              activeClassName={styles.active}
+              activeClassName={`${styles.active} ${isOnFooter ? 'visually-hidden' : ''}`}
             >
               {text}
             </NavLink>

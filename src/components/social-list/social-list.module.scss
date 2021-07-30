@@ -1,0 +1,42 @@
+@import "src/styles/_variables.scss";
+@import "src/styles/mixins.scss";
+
+.list {
+  @include list-style-none;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 16px;
+}
+
+.item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.link {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 16px;
+  height: 16px;
+
+  &:hover {
+    opacity: .6;
+  }
+}
+
+.facebook {
+  width: 9px;
+  background-image: url("../../img/facebook.svg");
+}
+
+.instagram {
+  background-image: url("../../img/instagram.svg");
+}
+
+.twitter {
+  background-image: url("../../img/twitter.svg");
+}
+
+.youtube {
+  background-image: url("../../img/youtube.svg");
+}
