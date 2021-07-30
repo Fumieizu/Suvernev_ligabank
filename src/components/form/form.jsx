@@ -37,7 +37,7 @@ export default function Form() {
     const historyList = history.slice();
 
     if (history.length >= MAX_HISTORY_COUNT) {
-      historyList.shift();
+      historyList.pop();
     }
 
     dispatch(updateHistory([...historyList,

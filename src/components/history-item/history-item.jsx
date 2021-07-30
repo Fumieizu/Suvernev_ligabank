@@ -8,9 +8,21 @@ export default function HistoryItem({data}) {
   const {date, sellValue, currencySellValue, buyValue, currencyBuyValue} = data;
   return (
     <li className={styles.item}>
-      <span className={styles.date}>{adaptDate(date, DateType.HISTORY)}</span>
-      <span className={styles.from}>{sellValue} {currencySellValue}</span>
-      <span className={styles.to}>{buyValue} {currencyBuyValue}</span>
+      <span
+        className={styles.date}
+      >
+        {adaptDate(date, DateType.HISTORY)}
+      </span>
+      <span
+        className={styles.from}
+      >
+        {sellValue.toString().replace('.', ',')} {currencySellValue}
+      </span>
+      <span
+        className={styles.to}
+      >
+        {buyValue.toString().replace('.', ',')} {currencyBuyValue}
+      </span>
     </li>
   );
 }
